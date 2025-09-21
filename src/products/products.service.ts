@@ -3,7 +3,7 @@ import { Product } from "./products.model";
 
 @Injectable()
 export class ProductsService {
-  products: Product[] = [];
+  private products: Product[] = [];
 
   addProduct(name: string, description: string, price: number) {
     const id = this.products.length + 1;
@@ -11,5 +11,9 @@ export class ProductsService {
     this.products.push(newProduct);
 
     return newProduct;
+  }
+
+  getProducts() {
+    return [...this.products];
   }
 }
