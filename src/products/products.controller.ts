@@ -15,9 +15,9 @@ export class ProductsController {
     @Body("name") name: string,
     @Body("description") description: string,
     @Body("price") price: number,
-  ): string {
+  ): any {
     const product = this.productsService.addProduct(name, description, price);
 
-    return product.name + " added successfully!";
+    return product;
   }
 }
