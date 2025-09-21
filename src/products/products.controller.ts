@@ -6,8 +6,8 @@ export class ProductsController {
   constructor(private productsService: ProductsService) {}
 
   @Get()
-  getProducts(): string {
-    return "Products controller works!";
+  getProducts(): any {
+    return this.productsService.getProducts();
   }
 
   @Post()
