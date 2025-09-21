@@ -11,8 +11,8 @@ export class ProductsController {
   }
 
   @Get(":id")
-  getProduct(@Param("id") id: string): any {
-    return `Product id ${id}`;
+  getProduct(@Param("id") id: number): any {
+    return this.productsService.getProduct(id);
   }
 
   @Post()
