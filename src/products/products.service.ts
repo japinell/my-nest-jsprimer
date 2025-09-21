@@ -9,6 +9,7 @@ export class ProductsService {
     const id = this.products.length + 1;
     const newProduct = new Product(id, name, description, price);
     this.products.push(newProduct);
+
     return newProduct;
   }
 }
